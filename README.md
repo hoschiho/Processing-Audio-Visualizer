@@ -21,11 +21,16 @@ SPACE: play / pauses the song (animation is still running, but obviously the bea
 
 ## Change the song
 You can change the song by adding a new song into the project folder and change the name on line 41:
+```java
 song = minim.loadFile("AnySong.mp3", 2048);
+```
 Please note that sometimes the beat detection algorithm needs to be dampen, depending on the song played. You can do that with setSensitivity. Default value is 10.
+```java
 beat.setSensitivity(150);
-
+```
 ## Fancy stuff you can change in the code
 If you comment out value a & b on line 106 & 107, the sliders a & b won't work anymore, but a & b are moving in and out between -0.2 and 0.2. This leads to an even fancier animation.
+```java
   a = mySliderCollection[0].sliderVal/10.0;
   b = mySliderCollection[1].sliderVal/10.0;
+```
